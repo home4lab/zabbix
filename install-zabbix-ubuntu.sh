@@ -8,7 +8,12 @@ apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sq
 
 
 mysql -uroot -p
-mysql --defaults-extra-file=sql.cnf -e "create database zabbix character set utf8 collate utf8_bin;"
-mysql --defaults-extra-file=sql.cnf -e "create user zabbix@localhost identified by 'zabbix';"
-mysql --defaults-extra-file=sql.cnf -e "grant all privileges on zabbix.* to zabbix@localhost;"
+#mysql --defaults-extra-file=sql.cnf -e "create database zabbix character set utf8 collate utf8_bin;"
+#mysql --defaults-extra-file=sql.cnf -e "create user zabbix@localhost identified by 'zabbix';"
+#mysql --defaults-extra-file=sql.cnf -e "grant all privileges on zabbix.* to zabbix@localhost;"
 
+create database zabbix character set utf8 collate utf8_bin;
+create user zabbix@localhost identified by 'zabbix';
+grant all privileges on zabbix.* to zabbix@localhost;
+
+zcat /usr/share/doc/zabbix-sql-scripts/mysql/create.sql.gz | mysql -uzabbix -p zabbix
