@@ -33,7 +33,7 @@ $ZBX_SERVER                     = 'localhost';
 $ZBX_SERVER_PORT                = '10051';
 $ZBX_SERVER_NAME                = '';
 
-$IMAGE_FORMAT_DEFAULT   = IMAGE_FORMAT_PNG;
+$IMAGE_FORMAT_DEFAULT           = IMAGE_FORMAT_PNG;
 
 // Uncomment this block only if you are using Elasticsearch.
 // Elasticsearch url (can be string if same url is used for all types).
