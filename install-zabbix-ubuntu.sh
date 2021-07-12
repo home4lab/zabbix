@@ -37,7 +37,7 @@ systemctl enable zabbix-server zabbix-agent apache2
 
 
 echo ""
-echo " === COPYING ZABBIX SERVER CONF === "
+echo " === COPYING ZABBIX SERVER DATABASE AND WEB === "
 echo ""
 cp --remove-destination zabbix_server.conf /etc/zabbix/
 cp --remove-destination zabbix.conf.php /usr/share/zabbix/conf/
