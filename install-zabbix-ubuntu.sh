@@ -33,14 +33,19 @@ zcat /usr/share/doc/zabbix-sql-scripts/mysql/create.sql.gz | mysql -uzabbix -p${
 echo ""
 echo " === ENABLE SERVICE ZABBIX SERVER AGENT AND APACHE === "
 echo ""
-systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
 
 
 echo ""
 echo " === COPYING ZABBIX SERVER CONF === "
 echo ""
-cp zabbix_server.conf /usr/share/zabbix/conf/
+cp --remove-destination zabbix_server.conf /etc/zabbix/
+cp --remove-destination zabbix.conf.php /usr/share/zabbix/conf/
+
+echo ""
+echo " === RESTART SERVICE ZABBIX SERVER AGENT AND APACHE === "
+echo ""
+systemctl restart zabbix-server zabbix-agent apache2
 
 
 echo ""
