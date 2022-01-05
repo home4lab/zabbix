@@ -7,4 +7,5 @@ chown install
 bash install
 
 enable schedule report on zabbix
+
 https://noise.getoto.net/tag/zabbix-5-4/
