@@ -5,8 +5,13 @@
 how to use this ?
 
     git clone https://github.com/home4lab/zabbix.git
-    chmod +x install-zabbix-ubuntu.sh
-    bash install-zabbix-ubuntu.sh
+    chmod +x *.sh
+    
+    if u want to use mysql
+    bash install-zabbix-mysql.sh
+    
+    if u want to use postgresql
+    bash install-zabbix-postgresql.sh
 
 enable schedule report on zabbix
 
