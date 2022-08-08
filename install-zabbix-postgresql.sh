@@ -20,7 +20,7 @@ sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 echo ""
-echo " === INSTALL ZABBIX WITH MYSQL === "
+echo " === INSTALL ZABBIX WITH POSTGRESQL === "
 echo ""
 apt update
 apt install postgresql postgresql-contrib zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent -y
