@@ -5,6 +5,7 @@
 how to use this ?
 
     git clone https://github.com/home4lab/zabbix.git
+    cd zabbix
     chmod +x *.sh
     
     if u want to use mysql
